@@ -1,9 +1,9 @@
 export default function FAQ(){
   const qas = [
-    {q:'¿Duele la infiltración?', a:'Usamos anestesia local y guía por imagen para minimizar molestias. La mayoría de los pacientes lo tolera bien.'},
+    {q:'¿Duele la infiltración?', a:'Usamos anestesia local y técnicas de precisión para minimizar molestias. La mayoría de los pacientes lo tolera bien.'},
     {q:'¿Cuánto dura el efecto?', a:'Depende de la articulación y el diagnóstico. En PRP o ácido hialurónico el beneficio puede ser de meses; los resultados varían según el caso.'},
     {q:'¿Quiénes son candidatos?', a:'Pacientes con dolor articular que buscan una alternativa intermedia entre fármacos y cirugía. Se valora en consulta.'},
-    {q:'¿Necesito estudios?', a:'Trae tus RX, resonancias o ultrasonidos si los tienes. En consulta definimos si se requieren.'},
+    {q:'¿Necesito estudios?', a:'Trae tus RX, resonancias u otros estudios si los tienes. En consulta definimos si se requieren.'},
   ];
   return (
     <section id="faq" className="mx-auto max-w-6xl px-4 py-16">

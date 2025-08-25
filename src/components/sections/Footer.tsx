@@ -10,14 +10,14 @@ export default function Footer(){
             <MonoIcon size={28} />
             <div className="font-semibold" style={{ color: '#344D63' }}>Infiltra Clínica</div>
           </div>
-          <p className="mt-3 text-slate-600 max-w-sm">Un solo enfoque. <strong style={{ color: '#106D78' }}>Precisión guiada por imagen</strong> para aliviar tu dolor articular.</p>
+          <p className="mt-3 text-slate-600 max-w-sm">Un solo enfoque. <strong style={{ color: '#106D78' }}>Precisión médica especializada</strong> para aliviar tu dolor articular.</p>
           <p className="mt-4 text-xs text-slate-500">Aviso: La información no sustituye una consulta médica. Los resultados pueden variar según el paciente.</p>
         </div>
         <div>
           <div className="font-medium text-slate-800">Contacto</div>
           <ul className="mt-2 space-y-1 text-slate-600">
-            <li><a href="tel:+529991234567" className="hover:underline">+52 999 123 4567</a></li>
-            <li><a href="mailto:contacto@infiltra.mx" className="hover:underline">contacto@infiltra.mx</a></li>
+            <li><a href="tel:+5219993537967" className="hover:underline">+52 1 999 353 7967</a></li>
+            <li><a href="mailto:contacto@infiltraclinicamerida.com" className="hover:underline">contacto@infiltraclinicamerida.com</a></li>
             <li>Mérida, Yucatán</li>
           </ul>
         </div>
@@ -28,6 +28,7 @@ export default function Footer(){
             <li><Link href="/tratamientos" className="hover:underline">Tratamientos</Link></li>
             <li><Link href="/faq" className="hover:underline">FAQ</Link></li>
             <li><Link href="/contacto" className="hover:underline">Contacto</Link></li>
+            <li><Link href="/aviso-de-privacidad" className="hover:underline">Aviso de Privacidad</Link></li>
           </ul>
         </div>
       </div>

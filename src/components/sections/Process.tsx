@@ -2,7 +2,7 @@ export default function Process(){
   const steps = [
     {title:'Evaluación', desc:'Historia clínica, exploración y revisión de estudios.'},
     {title:'Plan', desc:'Indicaciones, riesgos/beneficios y consentimiento informado.'},
-    {title:'Procedimiento', desc:'Guía por ultrasonido/fluoroscopia. Control del dolor y esterilidad.'},
+    {title:'Procedimiento', desc:'Técnicas de precisión médica. Control del dolor y esterilidad.'},
     {title:'Seguimiento', desc:'Plan de rehabilitación y comunicación con tu médico tratante.'},
   ];
   return (

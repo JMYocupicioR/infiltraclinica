@@ -14,13 +14,13 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-medium" style={{ backgroundColor: '#E6F7FA', color: '#106D78' }}>
             <span>Clínica hiperespecializada</span>
             <span className="opacity-50">•</span>
-            <span>Guía por imagen</span>
+            <span>Máxima precisión</span>
           </div>
           <h1 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight" style={{ color: '#344D63' }}>
-            Infiltraciones guiadas por imagen
+            Infiltraciones de precisión
           </h1>
           <p className="mt-3 text-lg text-slate-600 max-w-xl">
-            Un solo enfoque. <strong style={{ color: '#106D78' }}>Precisión guiada por imagen</strong> para aliviar el dolor articular y <span className="whitespace-nowrap">posponer la cirugía.</span>
+            Un solo enfoque. <strong style={{ color: '#106D78' }}>Precisión médica especializada</strong> para aliviar el dolor articular y <span className="whitespace-nowrap">posponer la cirugía.</span>
           </p>
 
           <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700">
@@ -31,7 +31,7 @@ export default function Hero() {
           </ul>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="https://wa.me/529991234567" className="px-5 py-3 rounded-2xl text-white font-medium" style={{ backgroundColor: '#106D78' }}>Agenda tu cita</a>
+            <a href="https://wa.me/5219993537967" className="px-5 py-3 rounded-2xl text-white font-medium" style={{ backgroundColor: '#106D78' }}>Agenda tu cita</a>
             <a href="#tratamientos" className="px-5 py-3 rounded-2xl font-medium border" style={{ borderColor: '#CBD5E1' }}>Ver tratamientos</a>
             <div className="text-xs text-slate-500">Resultados pueden variar. Esta información no sustituye consulta médica.</div>
           </div>
@@ -57,7 +57,7 @@ export default function Hero() {
                 <option>Otras articulaciones</option>
               </select></label>
               <button type="submit" className="mt-2 px-4 py-2 rounded-2xl text-white font-medium" style={{ backgroundColor: '#106D78' }}>Solicitar llamada</button>
-              <a href="https://wa.me/529991234567" className="text-center px-4 py-2 rounded-2xl font-medium border" style={{ borderColor: '#CBD5E1' }}>Prefiero WhatsApp</a>
+              <a href="https://wa.me/5219993537967" className="text-center px-4 py-2 rounded-2xl font-medium border" style={{ borderColor: '#CBD5E1' }}>Prefiero WhatsApp</a>
             </form>
           </div>
         </div>

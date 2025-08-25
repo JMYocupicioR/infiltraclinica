@@ -25,7 +25,7 @@ export default function Treatments(){
                 </div>
                 <div className="font-medium text-slate-800">{c.name}</div>
               </div>
-              <div className="mt-3 text-sm text-slate-600">Infiltraciones avanzadas guiadas por imagen. Explicación clara antes de decidir el procedimiento.</div>
+              <div className="mt-3 text-sm text-slate-600">Infiltraciones de precisión avanzadas. Explicación clara antes de decidir el procedimiento.</div>
             </a>
           ))}
         </div>

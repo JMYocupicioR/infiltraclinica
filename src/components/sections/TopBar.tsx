@@ -9,7 +9,7 @@ export default function TopBar() {
           <MonoIcon size={36} />
           <div className="leading-tight">
             <div className="text-lg font-bold tracking-tight" style={{ color: '#344D63' }}>Infiltra Clínica</div>
-            <div className="text-[11px] text-slate-500">Un solo enfoque. <span className="font-medium" style={{ color: '#106D78' }}>Precisión guiada por imagen.</span></div>
+            <div className="text-[11px] text-slate-500">Un solo enfoque. <span className="font-medium" style={{ color: '#106D78' }}>Precisión médica especializada.</span></div>
           </div>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm text-slate-600">
@@ -18,8 +18,8 @@ export default function TopBar() {
           <Link href="/faq" className="hover:text-slate-900">FAQ</Link>
         </nav>
         <div className="flex items-center gap-2">
-          <a href="tel:+529991234567" className="hidden sm:inline-block px-4 py-2 rounded-2xl border border-slate-300 text-sm">Llámanos</a>
-          <a href="https://wa.me/529991234567" className="px-4 py-2 rounded-2xl text-sm text-white" style={{ backgroundColor: '#106D78' }}>Agenda por WhatsApp</a>
+          <a href="tel:+5219993537967" className="hidden sm:inline-block px-4 py-2 rounded-2xl border border-slate-300 text-sm">Llámanos</a>
+          <a href="https://wa.me/5219993537967" className="px-4 py-2 rounded-2xl text-sm text-white" style={{ backgroundColor: '#106D78' }}>Agenda por WhatsApp</a>
         </div>
       </div>
     </header>

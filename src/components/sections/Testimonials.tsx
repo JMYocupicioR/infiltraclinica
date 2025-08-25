@@ -1,7 +1,7 @@
 export default function Testimonials(){
   const items = [
     {quote:'Me explicaron todo con calma y el procedimiento fue rápido. A la semana ya caminaba mejor.', author:'Elena, 68 años'},
-    {quote:'Me gustó que usaran ultrasonido para ver exactamente dónde iba la inyección.', author:'Carlos, 43 años'},
+    {quote:'Me gustó la precisión del procedimiento y que me explicaran cada paso del proceso.', author:'Carlos, 43 años'},
     {quote:'Trato humano y seguimiento. Recomiendo la clínica.', author:'Sofía, 56 años'},
   ];
   return (

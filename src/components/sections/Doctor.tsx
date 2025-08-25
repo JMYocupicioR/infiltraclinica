@@ -9,7 +9,7 @@ export default function Doctor(){
         </div>
         <div>
           <h3 className="text-2xl font-bold tracking-tight" style={{ color: '#344D63' }}>Tu especialista</h3>
-          <p className="mt-2 text-slate-600">Médico con práctica dedicada a infiltraciones guiadas por imagen. Entrenamiento en técnicas avanzadas y protocolos de seguridad. Trabajo coordinado con reumatología, ortopedia y rehabilitación.</p>
+          <p className="mt-2 text-slate-600">Médico con práctica dedicada a infiltraciones de precisión. Entrenamiento en técnicas avanzadas y protocolos de seguridad. Trabajo coordinado con reumatología, ortopedia y rehabilitación.</p>
           <ul className="mt-4 space-y-2 text-sm text-slate-700">
             <li className="flex gap-2"><Check /> Experiencia en PRP/ácido hialurónico y esteroides intraarticulares.</li>
             <li className="flex gap-2"><Check /> Consentimiento informado y educación del paciente.</li>
