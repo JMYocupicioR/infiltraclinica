@@ -1,4 +1,17 @@
+import { useEffect, useState } from 'react';
+
 export default function FacebookPost() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    
+    // Reinitialize Facebook SDK when component mounts
+    if (typeof window !== 'undefined' && (window as any).FB) {
+      (window as any).FB.XFBML.parse();
+    }
+  }, []);
+
   return (
     <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-6xl px-4">
@@ -25,28 +38,25 @@ export default function FacebookPost() {
               </div>
             </div>
             
-            <div className="relative">
-              <div 
-                className="fb-post" 
-                data-href="https://www.facebook.com/share/p/16ukiTHg4i/" 
-                data-width="500" 
-                data-show-text="true"
-              >
-                <blockquote 
-                  cite="https://www.facebook.com/share/p/16ukiTHg4i/" 
-                  className="fb-xfbml-parse-ignore"
-                >
-                  {/* Fallback content while Facebook post loads */}
-                  <div className="text-center py-8">
-                    <div className="animate-pulse">
-                      <div className="h-4 bg-slate-200 rounded w-3/4 mx-auto mb-3"></div>
-                      <div className="h-4 bg-slate-200 rounded w-1/2 mx-auto mb-3"></div>
-                      <div className="h-32 bg-slate-200 rounded mx-auto"></div>
-                    </div>
-                    <p className="text-sm text-slate-500 mt-4">Cargando publicación...</p>
+            <div className="relative min-h-[200px]">
+              {isClient ? (
+                <div 
+                  className="fb-post" 
+                  data-href="https://www.facebook.com/share/p/16ukiTHg4i/" 
+                  data-width="500" 
+                  data-show-text="true"
+                ></div>
+              ) : (
+                // Server-side fallback content
+                <div className="text-center py-8">
+                  <div className="animate-pulse">
+                    <div className="h-4 bg-slate-200 rounded w-3/4 mx-auto mb-3"></div>
+                    <div className="h-4 bg-slate-200 rounded w-1/2 mx-auto mb-3"></div>
+                    <div className="h-32 bg-slate-200 rounded mx-auto"></div>
                   </div>
-                </blockquote>
-              </div>
+                  <p className="text-sm text-slate-500 mt-4">Cargando publicación de Facebook...</p>
+                </div>
+              )}
             </div>
             
             <div className="mt-6 text-center">
