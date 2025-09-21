@@ -50,6 +50,14 @@ const conditions = [
     commonAreas: ["Columna cervical", "Columna lumbar"],
     color: "from-pink-50 to-rose-50",
     borderColor: "border-pink-200"
+  },
+  {
+    name: "Tenosinovitis de De Quervain",
+    slug: "tenosinovitis-de-quervain",
+    description: "Inflamación dolorosa de los tendones del pulgar, muy común en la era digital",
+    commonAreas: ["Muñeca", "Pulgar"],
+    color: "from-indigo-50 to-blue-50",
+    borderColor: "border-indigo-200"
   }
 ];
 
