@@ -26,7 +26,7 @@ export default function FinalCTA() {
             Agenda por WhatsApp
           </a>
           <a
-            href={	el:}
+            href="tel:+529999123456"
             className="px-5 py-3 rounded-2xl font-medium border border-white/60"
           >
             Llámanos
