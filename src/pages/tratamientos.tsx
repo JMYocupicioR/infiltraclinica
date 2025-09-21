@@ -171,7 +171,7 @@ export default function TratamientosPage() {
                 <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-100 min-h-[300px]">
                   {isClient ? (
                     <iframe
-                      src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61579559341262%2Fvideos%2F2015176182653401&show_text=false&width=560&t=0"
+                      src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02vwCArHgsfgwaoF8JeUNVfNo2apKbg78ZpAbrKvhVNfjR48vChxTiJedNY9mhVSHLl%26id%3D61579559341262%26rdid%3DwYrfSK8FukKgFYR8&show_text=false&width=560&t=0"
                       width="100%"
                       height="100%"
                       style={{ border: 'none', overflow: 'hidden', position: 'absolute', top: 0, left: 0 }}
@@ -238,7 +238,7 @@ export default function TratamientosPage() {
                     Agendar infiltración de rodilla
                   </a>
                   <a 
-                    href="https://www.facebook.com/61579559341262/videos/2015176182653401"
+                    href="https://www.facebook.com/permalink.php?story_fbid=pfbid02vwCArHgsfgwaoF8JeUNVfNo2apKbg78ZpAbrKvhVNfjR48vChxTiJedNY9mhVSHLl&id=61579559341262&rdid=wYrfSK8FukKgFYR8"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-800 px-4 py-3"
