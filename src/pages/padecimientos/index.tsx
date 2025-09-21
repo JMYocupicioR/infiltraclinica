@@ -58,6 +58,14 @@ const conditions = [
     commonAreas: ["Muñeca", "Pulgar"],
     color: "from-indigo-50 to-blue-50",
     borderColor: "border-indigo-200"
+  },
+  {
+    name: "Gonartrosis",
+    slug: "gonartrosis",
+    description: "Artrosis específica de rodilla, una de las causas más comunes de dolor y limitación funcional",
+    commonAreas: ["Rodilla"],
+    color: "from-cyan-50 to-blue-50",
+    borderColor: "border-cyan-200"
   }
 ];
 

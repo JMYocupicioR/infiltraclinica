@@ -2,6 +2,7 @@
 import TrustStrip from "@/components/sections/TrustStrip";
 import WhySection from "@/components/sections/WhySection";
 import Treatments from "@/components/sections/Treatments";
+import GonartriosisVideo from "@/components/sections/GonartriosisVideo";
 import Process from "@/components/sections/Process";
 import Doctor from "@/components/sections/Doctor";
 import FacebookPost from "@/components/sections/FacebookPost";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <TrustStrip />
       <WhySection />
       <Treatments />
+      <GonartriosisVideo />
       <Process />
       <Doctor />
       <FacebookPost />
