@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="font-medium text-slate-800">Contacto</div>
           <ul className="mt-2 space-y-1 text-slate-600">
             <li>
-              <a href={	el:} className="hover:underline">
+              <a href="tel:+529999123456" className="hover:underline">
                 {SITE_CONFIG.telephoneDisplay}
               </a>
             </li>
