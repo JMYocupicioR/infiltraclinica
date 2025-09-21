@@ -187,6 +187,49 @@ export default function TenosinovitisDeQuervainPage() {
         <section className="py-16">
           <div className="mx-auto max-w-6xl px-4">
             <h2 className="text-2xl font-bold text-center mb-12" style={{ color: '#344D63' }}>
+              Video Educativo: ¿Qué es la Tenosinovitis de De Quervain?
+            </h2>
+            <div className="max-w-4xl mx-auto mb-16">
+              <div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-8">
+                <p className="text-center text-gray-600 mb-6">
+                  Nuestro especialista explica de manera clara y sencilla qué es la tenosinovitis de De Quervain, 
+                  sus síntomas principales y cómo las infiltraciones pueden ayudarte a recuperar la función normal de tu mano.
+                </p>
+                <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-100">
+                  <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61579559341262%2Fvideos%2F1358041189278198%2F&show_text=false&width=560&t=0"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 'none', overflow: 'hidden', position: 'absolute', top: 0, left: 0 }}
+                    scrolling="no"
+                    frameBorder="0"
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    title="Video educativo sobre Tenosinovitis de De Quervain"
+                    className="rounded-2xl"
+                  ></iframe>
+                </div>
+                <div className="mt-4 text-center">
+                  <a 
+                    href="https://www.facebook.com/61579559341262/videos/1358041189278198"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-800"
+                  >
+                    Ver en Facebook
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-slate-50">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-2xl font-bold text-center mb-12" style={{ color: '#344D63' }}>
               Diagnóstico Especializado
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
