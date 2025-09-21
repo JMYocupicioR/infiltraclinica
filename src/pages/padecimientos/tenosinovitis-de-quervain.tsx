@@ -173,7 +173,7 @@ export default function TenosinovitisDeQuervainPage() {
                   <ul className="space-y-2">
                     {category.factors.map((factor, factorIndex) => (
                       <li key={factorIndex} className="flex gap-2 items-start">
-                        <Check size={14} />
+                        <Check />
                         <span className="text-sm text-slate-600">{factor}</span>
                       </li>
                     ))}
