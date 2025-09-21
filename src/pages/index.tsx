@@ -4,6 +4,7 @@ import WhySection from "@/components/sections/WhySection";
 import Treatments from "@/components/sections/Treatments";
 import Process from "@/components/sections/Process";
 import Doctor from "@/components/sections/Doctor";
+import FacebookPost from "@/components/sections/FacebookPost";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ, { faqItems } from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -23,6 +24,7 @@ export default function HomePage() {
       <Treatments />
       <Process />
       <Doctor />
+      <FacebookPost />
       <Testimonials />
       <FAQ />
       <FinalCTA />
