@@ -25,31 +25,28 @@ export default function GonartriosisVideo() {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-8">
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-100 min-h-[300px]">
-              {isClient ? (
-                <iframe
-                  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61579559341262%2Fvideos%2F1303903141191043%2F&show_text=false&width=560&t=0"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 'none', overflow: 'hidden', position: 'absolute', top: 0, left: 0 }}
-                  scrolling="no"
-                  frameBorder="0"
-                  allowFullScreen={true}
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  title="Video educativo sobre Gonartrosis"
-                  className="rounded-2xl"
-                />
-              ) : (
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-center">
-                    <div className="animate-pulse mb-4">
-                      <div className="w-16 h-16 bg-slate-300 rounded-full mx-auto mb-4"></div>
+          <div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-4 sm:p-8 overflow-hidden">
+            <div className="w-full max-w-full">
+              <div className="relative w-full h-0" style={{ paddingBottom: '56.25%' }}>
+                {isClient ? (
+                  <div 
+                    className="fb-video absolute inset-0 w-full h-full rounded-2xl overflow-hidden bg-slate-100"
+                    data-href="https://www.facebook.com/61579559341262/videos/1303903141191043/"
+                    data-width="auto"
+                    data-show-text="false"
+                    data-allowfullscreen="true"
+                  ></div>
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center bg-slate-100 rounded-2xl">
+                    <div className="text-center">
+                      <div className="animate-pulse mb-4">
+                        <div className="w-16 h-16 bg-slate-300 rounded-full mx-auto mb-4"></div>
+                      </div>
+                      <p className="text-slate-500">Cargando video educativo...</p>
                     </div>
-                    <p className="text-slate-500">Cargando video educativo...</p>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
             
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
