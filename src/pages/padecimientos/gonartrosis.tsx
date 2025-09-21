@@ -227,6 +227,26 @@ export default function GonartriosisPage() {
           </div>
         </section>
 
+        <section className="py-16 bg-white">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl font-bold tracking-tight mb-6" style={{ color: '#344D63' }}>
+                Especialistas en Artrosis de Rodilla
+              </h2>
+              <div className="max-w-4xl mx-auto">
+                <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-cyan-50 p-8 shadow-sm">
+                  <img 
+                    src="https://scontent.fmid2-1.fna.fbcdn.net/v/t39.30808-6/542750676_122110074296985311_6698559102262876941_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEgZqc3kKa3lPn9eus2yK8M_TUBsv8Q-kT9NQGy_xD6RH4k5Ewd3vCtkM1AC0O_1-vNjITZGhg1QK8K6YC8ig3f&_nc_ohc=PaA51FxHOdoQ7kNvwHhVg2N&_nc_oc=AdnLbOjXgq_XYDIlFdlkzZc3uTfpMqL-YMe6mcv1UiUZ_gOlm8c6C87vsaWHK3KhCIdZexqh9GspDS0KLrWhX-gM&_nc_zt=23&_nc_ht=scontent.fmid2-1.fna&_nc_gid=BSGkkyzzpICA4qjcu-K27Q&oh=00_AfakfihGeuZ5OqR9SJlKPPZbGYbg_KzAuJIb9ieALGKBGA&oe=68D5889D"
+                    alt="Especialistas en Artrosis de Rodilla - Infiltra Clínica Mérida"
+                    className="w-full h-auto rounded-2xl shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 bg-slate-50">
           <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10 items-center">
             <div>
