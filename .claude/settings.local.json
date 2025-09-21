@@ -6,7 +6,10 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(git pull:*)",
-      "Bash(copy:*)"
+      "Bash(copy:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(npm run type-check:*)",
+      "Bash(npx tsc:*)"
     ],
     "deny": [],
     "ask": [],

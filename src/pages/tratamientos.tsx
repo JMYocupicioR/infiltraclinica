@@ -80,10 +80,9 @@ export default function TratamientosPage() {
             {treatments.map((treatment) => (
               <article
                 key={treatment.name}
-                className={
-ounded-3xl border border-slate-200 bg-white shadow-sm overflow-hidden}
+                className="rounded-3xl border border-slate-200 bg-white shadow-sm overflow-hidden"
               >
-                <div className={h-2 bg-gradient-to-r } aria-hidden="true" />
+                <div className={`h-2 bg-gradient-to-r ${treatment.color}`} aria-hidden="true" />
                 <div className="p-8 grid md:grid-cols-[2fr,1fr] gap-8">
                   <div>
                     <h2 className="text-2xl font-semibold" style={{ color: '#344D63' }}>{treatment.fullName}</h2>
@@ -132,7 +131,7 @@ ounded-3xl border border-slate-200 bg-white shadow-sm overflow-hidden}
                         Consultar disponibilidad
                       </a>
                       <a
-                        href={	el:}
+                        href="tel:+529999123456"
                         className="px-4 py-2 rounded-2xl border border-slate-300 text-sm text-center"
                       >
                         Hablar con el equipo
