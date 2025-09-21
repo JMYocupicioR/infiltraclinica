@@ -167,31 +167,35 @@ export default function TratamientosPage() {
             </div>
             
             <div className="max-w-4xl mx-auto">
-              <div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-8">
-                <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-100 min-h-[300px]">
-                  {isClient ? (
-                    <iframe
-                      src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61579559341262%2Fvideos%2F2015176182653401%2F&show_text=false&width=560&t=0"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 'none', overflow: 'hidden', position: 'absolute', top: 0, left: 0 }}
-                      scrolling="no"
-                      frameBorder="0"
-                      allowFullScreen={true}
-                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                      title="Video de infiltración de rodilla - Infiltra Clínica"
-                      className="rounded-2xl"
-                    />
-                  ) : (
-                    <div className="flex items-center justify-center h-full">
-                      <div className="text-center">
-                        <div className="animate-pulse mb-4">
-                          <div className="w-16 h-16 bg-slate-300 rounded-full mx-auto mb-4"></div>
+              <div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-4 sm:p-8">
+                <div className="rounded-2xl overflow-hidden bg-slate-100">
+                  <div
+                    className="relative w-full"
+                    style={{ paddingTop: '56.25%' }}
+                  >
+                    {isClient ? (
+                      <iframe
+                        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61579559341262%2Fvideos%2F2015176182653401%2F&show_text=false&width=560"
+                        width="560"
+                        height="315"
+                        style={{ border: 'none', overflow: 'hidden', position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                        scrolling="no"
+                        frameBorder="0"
+                        allowFullScreen={true}
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        title="Video de infiltración de rodilla - Infiltra Clínica"
+                      />
+                    ) : (
+                      <div className="flex items-center justify-center absolute inset-0">
+                        <div className="text-center">
+                          <div className="animate-pulse mb-4">
+                            <div className="w-16 h-16 bg-slate-300 rounded-full mx-auto mb-4"></div>
+                          </div>
+                          <p className="text-slate-500">Cargando video de tratamiento...</p>
                         </div>
-                        <p className="text-slate-500">Cargando video de tratamiento...</p>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
                 
                 <div className="mt-6 grid md:grid-cols-3 gap-4 text-center">
