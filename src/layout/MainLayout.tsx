@@ -87,6 +87,16 @@ export default function MainLayout({
         <link rel="alternate" hrefLang="x-default" href={SITE_CONFIG.siteUrl} />
         <meta name="format-detection" content="telephone=no" />
         <meta name="theme-color" content="#106D78" />
+        
+        {/* Facebook específico */}
+        <meta property="fb:app_id" content="" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* DNS prefetch para redes sociales */}
+        <link rel="dns-prefetch" href="//www.facebook.com" />
+        <link rel="dns-prefetch" href="//connect.facebook.net" />
+        <link rel="dns-prefetch" href="//platform.twitter.com" />
         {schemaBlocks.map((block, index) => (
           <script
             key={index}

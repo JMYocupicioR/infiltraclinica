@@ -20,6 +20,7 @@ export default function TopBar() {
         <nav className="hidden md:flex items-center gap-6 text-sm text-slate-600" aria-label="Secciones principales">
           <Link href="/nosotros" className="hover:text-slate-900">Nosotros</Link>
           <Link href="/tratamientos" className="hover:text-slate-900">Tratamientos</Link>
+          <Link href="/padecimientos" className="hover:text-slate-900">Padecimientos</Link>
           <Link href="/faq" className="hover:text-slate-900">FAQ</Link>
         </nav>
         <div className="flex items-center gap-2">

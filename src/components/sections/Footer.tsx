@@ -44,6 +44,7 @@ export default function Footer() {
           <ul className="mt-2 space-y-1 text-slate-600">
             <li><Link href="/nosotros" className="hover:underline">Nosotros</Link></li>
             <li><Link href="/tratamientos" className="hover:underline">Tratamientos</Link></li>
+            <li><Link href="/padecimientos" className="hover:underline">Padecimientos</Link></li>
             <li><Link href="/faq" className="hover:underline">FAQ</Link></li>
             <li><Link href="/contacto" className="hover:underline">Contacto</Link></li>
             <li><Link href="/aviso-de-privacidad" className="hover:underline">Aviso de Privacidad</Link></li>

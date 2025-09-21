@@ -23,6 +23,9 @@ export const SITE_CONFIG = {
   telephoneDisplay: "+52 999 353 7967",
   telephoneSchema: "+529993537967",
   defaultImagePath: "/favicon.svg",
+  ogImage: "/og-image.jpg", // Imagen para compartir en redes sociales
+  facebookAppId: "", // Se puede agregar Facebook App ID si es necesario
+  twitterHandle: "@infiltraclinica", // Se puede actualizar cuando tengan Twitter
   sameAs: [] as string[],
   address: {
     locality: "Mérida",
@@ -98,4 +101,64 @@ export const faqJsonLd = (items: FaqItem[]): StructuredData => ({
       text: item.answer,
     },
   })),
+});
+
+// Función para generar Open Graph meta tags
+export const generateOpenGraphTags = (options: {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article';
+}) => {
+  const {
+    title = SITE_CONFIG.defaultTitle,
+    description = SITE_CONFIG.description,
+    image = absoluteUrl(SITE_CONFIG.ogImage),
+    url = SITE_CONFIG.siteUrl,
+    type = 'website'
+  } = options;
+
+  return {
+    'og:title': title,
+    'og:description': description,
+    'og:image': image,
+    'og:url': url,
+    'og:type': type,
+    'og:site_name': SITE_CONFIG.name,
+    'og:locale': SITE_CONFIG.locale,
+    // Facebook específico
+    'fb:app_id': SITE_CONFIG.facebookAppId,
+    // Twitter Cards
+    'twitter:card': 'summary_large_image',
+    'twitter:site': SITE_CONFIG.twitterHandle,
+    'twitter:title': title,
+    'twitter:description': description,
+    'twitter:image': image,
+  };
+};
+
+// Structured data para condiciones médicas
+export const medicalConditionJsonLd = (options: {
+  name: string;
+  description: string;
+  symptoms: string[];
+  treatments: string[];
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "MedicalCondition",
+  name: options.name,
+  description: options.description,
+  signOrSymptom: options.symptoms.map(symptom => ({
+    "@type": "MedicalSignOrSymptom",
+    name: symptom
+  })),
+  possibleTreatment: options.treatments.map(treatment => ({
+    "@type": "MedicalTherapy", 
+    name: treatment
+  })),
+  associatedAnatomy: {
+    "@type": "AnatomicalStructure",
+    name: "Articulaciones"
+  }
 });
