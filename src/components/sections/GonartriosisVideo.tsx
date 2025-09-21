@@ -29,7 +29,7 @@ export default function GonartriosisVideo() {
             <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-100 min-h-[300px]">
               {isClient ? (
                 <iframe
-                  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1G6kHwehMd%2F&show_text=false&width=560&t=0"
+                  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61579559341262%2Fvideos%2F1303903141191043%2F&show_text=false&width=560&t=0"
                   width="100%"
                   height="100%"
                   style={{ border: 'none', overflow: 'hidden', position: 'absolute', top: 0, left: 0 }}
@@ -64,7 +64,7 @@ export default function GonartriosisVideo() {
                 Ver información completa sobre gonartrosis
               </a>
               <a 
-                href="https://www.facebook.com/share/v/1G6kHwehMd/"
+                href="https://www.facebook.com/61579559341262/videos/1303903141191043/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-800"
