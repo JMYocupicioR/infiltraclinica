@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import MainLayout from '@/layout/MainLayout';
 import { absoluteUrl } from '@/lib/seo';
 
@@ -124,7 +124,11 @@ const AvisoDePrivacidadPage = () => {
                     setActiveSection(section.id);
                     document.getElementById(section.anchor)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }}
-                  className={lock w-full text-left px-4 py-2 rounded-xl border text-sm transition }
+                  className={`w-full text-left px-4 py-2 rounded-xl border text-sm transition ${
+                    activeSection === section.id
+                      ? 'bg-blue-50 border-blue-200 text-blue-800'
+                      : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+                  }`}
                 >
                   {section.title}
                 </button>

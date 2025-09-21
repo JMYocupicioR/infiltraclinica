@@ -2,7 +2,7 @@
 import MonoIcon from "../ui/MonoIcon";
 import { SITE_CONFIG } from "@/lib/seo";
 
-const PHONE_HREF = 	el:;
+const PHONE_HREF = "tel:+529999123456";
 
 export default function TopBar() {
   return (

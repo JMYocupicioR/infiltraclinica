@@ -1,7 +1,6 @@
 ﻿import MainLayout from "@/layout/MainLayout";
 import MonoIcon from "@/components/ui/MonoIcon";
 import Check from "@/components/ui/Check";
-import Badge from "@/components/ui/Badge";
 import { SITE_CONFIG, absoluteUrl } from "@/lib/seo";
 
 const treatments = [

@@ -73,7 +73,7 @@ export default function MainLayout({
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={ogImageUrl} />
-        <meta property="og:image:alt" content={${SITE_CONFIG.name} - } />
+        <meta property="og:image:alt" content={`${SITE_CONFIG.name} - ${metaDescription}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={metaDescription} />

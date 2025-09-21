@@ -20,19 +20,19 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <Script
             id="gtm-google"
             strategy="afterInteractive"
-            src={https://www.googletagmanager.com/gtag/js?id=}
+            src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
           />
           <Script id="gtm-google-init" strategy="afterInteractive">
-            {
+            {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '', {
+              gtag('config', 'G-XXXXXXXXXX', {
                 anonymize_ip: true,
                 allow_google_signals: false,
                 transport_url: 'https://www.google-analytics.com',
               });
-            }
+            `}
           </Script>
         </>
       ) : null}
