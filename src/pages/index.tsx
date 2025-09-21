@@ -9,6 +9,8 @@ import FacebookPost from "@/components/sections/FacebookPost";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ, { faqItems } from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import LocationHighlight from "@/components/sections/LocationHighlight";
+import LocationCTA from "@/components/sections/LocationCTA";
 import MainLayout from "@/layout/MainLayout";
 import { faqJsonLd } from "@/lib/seo";
 
@@ -25,11 +27,13 @@ export default function HomePage() {
       <Treatments />
       <GonartriosisVideo />
       <Process />
-      <Doctor />
-      <FacebookPost />
-      <Testimonials />
-      <FAQ />
+      <Doctor />\n      <LocationHighlight />\n      <FacebookPost />
+      <Testimonials />\n      <LocationCTA />\n      <FAQ />
       <FinalCTA />
     </MainLayout>
   );
 }
+
+
+
+

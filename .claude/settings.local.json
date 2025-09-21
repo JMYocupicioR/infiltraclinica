@@ -9,7 +9,8 @@
       "Bash(copy:*)",
       "mcp__ide__getDiagnostics",
       "Bash(npm run type-check:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(npm run lint)"
     ],
     "deny": [],
     "ask": [],
