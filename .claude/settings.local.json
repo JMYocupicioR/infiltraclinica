@@ -10,7 +10,8 @@
       "mcp__ide__getDiagnostics",
       "Bash(npm run type-check:*)",
       "Bash(npx tsc:*)",
-      "Bash(npm run lint)"
+      "Bash(npm run lint)",
+      "Read(//c/Users/JmYoc/OneDrive - Universidad Autonoma de Yucatan/Imágenes/Capturas de pantalla/**)"
     ],
     "deny": [],
     "ask": [],

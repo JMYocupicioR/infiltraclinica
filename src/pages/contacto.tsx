@@ -96,61 +96,19 @@ export default function ContactoPage() {
                 </ul>
               </div>
               <div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-8">
-                <h3 className="text-xl font-semibold" style={{ color: '#344D63' }}>¿Prefieres que te llamemos?</h3>
+                <h3 className="text-xl font-semibold" style={{ color: '#344D63' }}>Chat en vivo disponible</h3>
                 <p className="mt-3 text-sm text-slate-600">
-                  Déjanos tus datos y un miembro del equipo se comunicará contigo para confirmar agenda y resolver preguntas.
+                  Tenemos un asistente virtual disponible las 24 horas para resolver tus dudas y ayudarte a agendar tu cita. Búscalo en la esquina inferior derecha de la pantalla.
                 </p>
-                <form
-                  className="mt-6 grid grid-cols-1 gap-3"
-                  name="contacto-secundario"
-                  method="post"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                >
-                  <input type="hidden" name="form-name" value="contacto-secundario" />
-                  <p className="hidden">
-                    <label>
-                      No completar
-                      <input name="bot-field" autoComplete="off" />
-                    </label>
+                <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-medium text-blue-800">Asistente disponible ahora</span>
+                  </div>
+                  <p className="mt-2 text-xs text-blue-600">
+                    Haz clic en el chat para obtener respuestas inmediatas sobre tratamientos, horarios y agendar citas.
                   </p>
-                  <label className="text-sm">
-                    Nombre completo
-                    <input
-                      className="mt-1 w-full rounded-xl border px-3 py-2"
-                      name="nombre"
-                      placeholder="Tu nombre"
-                      autoComplete="name"
-                      required
-                    />
-                  </label>
-                  <label className="text-sm">
-                    Teléfono de contacto
-                    <input
-                      className="mt-1 w-full rounded-xl border px-3 py-2"
-                      name="telefono"
-                      placeholder="10 dígitos"
-                      inputMode="tel"
-                      pattern="[0-9]{10}"
-                      required
-                    />
-                  </label>
-                  <label className="text-sm">
-                    Preferencia de horario
-                    <select className="mt-1 w-full rounded-xl border px-3 py-2" name="horario">
-                      <option>Mañana (09:00 – 12:00)</option>
-                      <option>Mediodía (12:00 – 15:00)</option>
-                      <option>Tarde (15:00 – 19:00)</option>
-                    </select>
-                  </label>
-                  <button
-                    type="submit"
-                    className="mt-2 px-4 py-2 rounded-2xl text-white font-medium"
-                    style={{ backgroundColor: '#106D78' }}
-                  >
-                    Confirmar llamada
-                  </button>
-                </form>
+                </div>
               </div>
             </div>
           </div>

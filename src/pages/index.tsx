@@ -18,7 +18,7 @@ export default function HomePage() {
   return (
     <MainLayout
       title="Infiltraciones de precisión en Mérida | Infiltra Clínica"
-      description="Clínica hiperespecializada en infiltraciones guiadas para aliviar el dolor articular en Mérida, Yucatán. Agenda evaluación y recibe acompañamiento médico integral."
+      description="Clínica hiperespecializada en infiltraciones para aliviar el dolor articular en Mérida, Yucatán. Agenda evaluación y recibe acompañamiento médico integral."
       structuredData={[faqJsonLd(faqItems)]}
     >
       <Hero />

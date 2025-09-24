@@ -15,6 +15,7 @@ class MyDocument extends Document {
           <meta name="color-scheme" content="light" />
           <meta name="msapplication-TileColor" content="#106D78" />
           <link rel="preconnect" href="https://www.googletagmanager.com" />
+
         </Head>
         <body className="bg-white text-slate-800 antialiased">
           {/* Facebook SDK */}
@@ -42,6 +43,7 @@ class MyDocument extends Document {
           />
           <Main />
           <NextScript />
+
         </body>
       </Html>
     );

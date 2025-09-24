@@ -1,6 +1,7 @@
 ﻿import Head from 'next/head';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import TopBar from '../components/sections/TopBar';
 import Footer from '../components/sections/Footer';
 import type { ReactNode } from 'react';
@@ -37,6 +38,7 @@ export default function MainLayout({
   structuredData,
 }: MainLayoutProps) {
   const router = useRouter();
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const pageTitle = title || SITE_CONFIG.defaultTitle;
   const metaDescription = description || SITE_CONFIG.description;
 
@@ -110,11 +112,172 @@ export default function MainLayout({
       <main>{children}</main>
       <Footer />
 
-      <Script
-        id="whatsapp-widget"
-        src="https://w.app/widget-v1/4Q97wE.js"
-        strategy="lazyOnload"
-      />
+      {/* Widget de Chat Integrado */}
+      <div style={{ position: 'fixed', bottom: 0, right: 0, zIndex: 1000 }}>
+        {/* Ventana del Chat */}
+        {isChatOpen && (
+          <div
+            style={{
+              position: 'absolute',
+              bottom: '100px',
+              right: '20px',
+              width: '380px',
+              height: '500px',
+              backgroundColor: 'white',
+              borderRadius: '16px',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              animation: 'slideUp 0.3s ease-out'
+            }}
+          >
+            {/* Header del Chat */}
+            <div
+              style={{
+                backgroundColor: '#106D78',
+                color: 'white',
+                padding: '16px',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center'
+              }}
+            >
+              <div>
+                <h4 style={{ margin: 0, fontSize: '16px', fontWeight: 'bold' }}>
+                  Chat con Infiltra Clínica
+                </h4>
+                <p style={{ margin: 0, fontSize: '12px', opacity: 0.8 }}>
+                  Resolvemos tus dudas al instante
+                </p>
+              </div>
+              <button
+                onClick={() => setIsChatOpen(false)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: 'white',
+                  cursor: 'pointer',
+                  padding: '4px',
+                  borderRadius: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+                title="Cerrar chat"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M18 6L6 18M6 6l12 12"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            
+            {/* Iframe del Chat */}
+            <iframe
+              src="https://app.vectorshift.ai/chatbots/embedded/68d416bb4965a82592a22659?openChatbot=true&skipIntro=true"
+              style={{
+                flex: 1,
+                border: 'none',
+                width: '100%'
+              }}
+              allow="clipboard-read; clipboard-write; microphone"
+              title="Chat de Infiltra Clínica"
+            />
+          </div>
+        )}
+
+        {/* Botón Flotante */}
+        <div
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            width: '70px',
+            height: '70px',
+            backgroundColor: '#106D78',
+            borderRadius: '50%',
+            boxShadow: '0 4px 16px rgba(16, 109, 120, 0.3)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease',
+            transform: isChatOpen ? 'scale(0.9)' : 'scale(1)'
+          }}
+          onClick={() => setIsChatOpen(!isChatOpen)}
+          onMouseEnter={(e) => {
+            if (!isChatOpen) {
+              e.currentTarget.style.transform = 'scale(1.1)';
+              e.currentTarget.style.backgroundColor = '#0D5A63';
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (!isChatOpen) {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.backgroundColor = '#106D78';
+            }
+          }}
+          title={isChatOpen ? "Minimizar chat" : "Abrir chat"}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              setIsChatOpen(!isChatOpen);
+            }
+          }}
+        >
+          {isChatOpen ? (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M19 9l-7 7-7-7"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          ) : (
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M8 12h8m-8 4h6m4-8V7a2 2 0 00-2-2H6a2 2 0 00-2 2v12l4-4h8a2 2 0 002-2V8z"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+        </div>
+      </div>
+
+      {/* Animaciones CSS */}
+      <style jsx>{`
+        @keyframes slideUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @media (max-width: 640px) {
+          .chat-widget {
+            width: calc(100vw - 40px) !important;
+            height: 400px !important;
+            right: 20px !important;
+            left: 20px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

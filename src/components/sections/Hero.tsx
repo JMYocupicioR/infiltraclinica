@@ -1,68 +1,8 @@
-﻿'use client';
-
-import { FormEvent, useState } from "react";
-import MonoIcon from "../ui/MonoIcon";
+﻿import MonoIcon from "../ui/MonoIcon";
 import Check from "../ui/Check";
 import { SITE_CONFIG } from "@/lib/seo";
 
-type FormStatus = "idle" | "loading" | "success" | "error";
-
-const successMessage = "Gracias, en breve te contactamos.";
-const fallbackErrorMessage = "No pudimos enviar tu solicitud. Intenta de nuevo o usa WhatsApp.";
-
 export default function Hero() {
-  const [status, setStatus] = useState<FormStatus>("idle");
-  const [message, setMessage] = useState<string>("");
-
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    const nombre = String(formData.get("nombre") ?? "").trim();
-    const telefono = String(formData.get("telefono") ?? "").trim();
-    const motivo = String(formData.get("motivo") ?? "").trim();
-
-    if (!nombre) {
-      setStatus("error");
-      setMessage("Ingresa tu nombre completo.");
-      return;
-    }
-
-    const phoneDigits = telefono.replace(/[^0-9]/g, "");
-    if (phoneDigits.length < 10) {
-      setStatus("error");
-      setMessage("Revisa el numero de telefono (10 digitos).");
-      return;
-    }
-
-    setStatus("loading");
-    setMessage("");
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre, telefono, motivo }),
-      });
-
-      const data = (await response.json()) as { success?: boolean; message?: string };
-
-      if (!response.ok || !data.success) {
-        setStatus("error");
-        setMessage(data.message || fallbackErrorMessage);
-        return;
-      }
-
-      form.reset();
-      setStatus("success");
-      setMessage(data.message || successMessage);
-    } catch (error) {
-      console.error("contact form failed", error);
-      setStatus("error");
-      setMessage(fallbackErrorMessage);
-    }
-  };
 
   return (
     <section className="relative overflow-hidden">
@@ -129,69 +69,30 @@ export default function Hero() {
               </div>
             </div>
             <hr className="my-6 border-slate-200" />
-            <form className="grid grid-cols-1 gap-3" onSubmit={handleSubmit} noValidate>
-              <label className="text-sm">
-                Nombre
-                <input
-                  className="mt-1 w-full rounded-xl border px-3 py-2"
-                  name="nombre"
-                  placeholder="Tu nombre"
-                  autoComplete="name"
-                  required
-                  disabled={status === "loading"}
-                />
-              </label>
-              <label className="text-sm">
-                Tel&eacute;fono
-                <input
-                  className="mt-1 w-full rounded-xl border px-3 py-2"
-                  name="telefono"
-                  placeholder="10 d&iacute;gitos"
-                  inputMode="tel"
-                  pattern="[0-9]{10,15}"
-                  required
-                  disabled={status === "loading"}
-                />
-              </label>
-              <label className="text-sm">
-                Motivo de consulta
-                <select
-                  className="mt-1 w-full rounded-xl border px-3 py-2"
-                  name="motivo"
-                  defaultValue="Rodilla"
-                  disabled={status === "loading"}
+            <div className="space-y-4">
+              <p className="text-sm text-slate-600 text-center">
+                ¿Tienes dolor articular? Agenda tu evaluaci&oacute;n especializada
+              </p>
+              <div className="space-y-3">
+                <a
+                  href={SITE_CONFIG.whatsappUrl}
+                  className="w-full flex justify-center px-4 py-3 rounded-2xl text-white font-medium"
+                  style={{ backgroundColor: "#106D78" }}
                 >
-                  <option value="Rodilla">Dolor de rodilla</option>
-                  <option value="Hombro">Dolor de hombro</option>
-                  <option value="Cadera">Dolor de cadera</option>
-                  <option value="Columna">Columna / facetarias</option>
-                  <option value="Otras">Otras articulaciones</option>
-                </select>
-              </label>
-              <button
-                type="submit"
-                className="mt-2 px-4 py-2 rounded-2xl text-white font-medium"
-                style={{ backgroundColor: "#106D78" }}
-                disabled={status === "loading"}
-              >
-                {status === "loading" ? "Enviando..." : "Solicitar llamada"}
-              </button>
-              <a
-                href={SITE_CONFIG.whatsappUrl}
-                className="text-center px-4 py-2 rounded-2xl font-medium border"
-                style={{ borderColor: "#CBD5E1" }}
-              >
-                Prefiero WhatsApp
-              </a>
-              <div
-                className="text-sm"
-                aria-live="polite"
-                role={status === "error" ? "alert" : "status"}
-                style={{ color: status === "error" ? "#b91c1c" : "#106D78" }}
-              >
-                {message}
+                  Agenda por WhatsApp
+                </a>
+                <a
+                  href="#tratamientos"
+                  className="w-full flex justify-center px-4 py-2 rounded-2xl font-medium border"
+                  style={{ borderColor: "#CBD5E1" }}
+                >
+                  Ver tratamientos disponibles
+                </a>
               </div>
-            </form>
+              <div className="text-xs text-slate-500 text-center">
+                Horario: Lunes a viernes 9:00-19:00 hrs
+              </div>
+            </div>
           </div>
         </div>
       </div>
