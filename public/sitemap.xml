@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
     <loc>https://www.infiltraclinicamerida.com/</loc>
     <lastmod>2025-09-20</lastmod>
@@ -80,9 +81,14 @@
   </url>
   <url>
     <loc>https://www.infiltraclinicamerida.com/padecimientos/tenosinovitis-de-quervain</loc>
-    <lastmod>2025-09-21</lastmod>
+    <lastmod>2025-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.infiltraclinicamerida.com/tenosinovitis-quervain.png</image:loc>
+      <image:title>Anatomía de la Tenosinovitis de De Quervain</image:title>
+      <image:caption>Ilustración médica mostrando la inflamación de los tendones del pulgar en la tenosinovitis de De Quervain</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.infiltraclinicamerida.com/padecimientos/gonartrosis</loc>

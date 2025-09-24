@@ -2,6 +2,7 @@ import MainLayout from "@/layout/MainLayout";
 import MonoIcon from "@/components/ui/MonoIcon";
 import Check from "@/components/ui/Check";
 import { SITE_CONFIG, absoluteUrl, medicalConditionJsonLd } from "@/lib/seo";
+import Head from "next/head";
 
 const benefits = [
   "Alivio rápido del dolor en el lado radial de la muñeca",
@@ -68,6 +69,9 @@ const diagnosticTests = [
 ];
 
 export default function TenosinovitisDeQuervainPage() {
+  const pageUrl = absoluteUrl('/padecimientos/tenosinovitis-de-quervain');
+  const imageUrl = absoluteUrl('/tenosinovitis-quervain.png');
+  
   const conditionData = {
     name: "Tenosinovitis de De Quervain",
     description: "La tenosinovitis de De Quervain es una condición dolorosa que afecta los tendones del lado del pulgar de la muñeca, causada por la inflamación de la vaina tendinosa que los recubre.",
@@ -75,16 +79,113 @@ export default function TenosinovitisDeQuervainPage() {
     treatments: ["Infiltraciones con corticosteroides", "Infiltraciones guiadas por ecografía", "Reposo relativo", "Férula de inmovilización"]
   };
 
+  // Datos estructurados adicionales para mejor SEO
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Tenosinovitis de De Quervain: Tratamiento con Infiltraciones",
+    "description": "Información completa sobre la tenosinovitis de De Quervain, síntomas, diagnóstico y tratamiento con infiltraciones de precisión en Mérida, Yucatán.",
+    "url": pageUrl,
+    "image": imageUrl,
+    "inLanguage": "es-MX",
+    "datePublished": "2024-01-15",
+    "dateModified": new Date().toISOString(),
+    "author": {
+      "@type": "MedicalOrganization",
+      "name": "Infiltra Clínica",
+      "url": SITE_CONFIG.siteUrl
+    },
+    "publisher": {
+      "@type": "MedicalOrganization", 
+      "name": "Infiltra Clínica",
+      "logo": {
+        "@type": "ImageObject",
+        "url": absoluteUrl("/favicon.svg")
+      }
+    },
+    "mainEntity": {
+      "@type": "MedicalCondition",
+      "name": "Tenosinovitis de De Quervain",
+      "alternateName": ["Pulgar de WhatsApp", "Tendinitis del pulgar", "Síndrome de De Quervain"],
+      "description": conditionData.description,
+      "associatedAnatomy": {
+        "@type": "AnatomicalStructure",
+        "name": "Tendones del pulgar y muñeca"
+      },
+      "signOrSymptom": symptoms.map(symptom => ({
+        "@type": "MedicalSignOrSymptom",
+        "name": symptom
+      })),
+      "possibleTreatment": {
+        "@type": "MedicalTherapy",
+        "name": "Infiltraciones con corticosteroides guiadas por imagen"
+      }
+    }
+  };
+
   return (
     <MainLayout
-      title="Tenosinovitis de De Quervain | Tratamiento con Infiltraciones"
-      description="Tratamiento especializado para tenosinovitis de De Quervain con infiltraciones de precisión. Alivio efectivo del dolor de pulgar y muñeca con resultados rápidos en Mérida."
+      title="Tenosinovitis de De Quervain: Tratamiento con Infiltraciones | Infiltra Clínica Mérida"
+      description="Tratamiento especializado para tenosinovitis de De Quervain (pulgar de WhatsApp) con infiltraciones de precisión en Mérida. Alivio efectivo del dolor de pulgar y muñeca con 90% de efectividad. Consulta especializada."
+      image="/tenosinovitis-quervain.png"
+      canonical={absoluteUrl('/padecimientos/tenosinovitis-de-quervain')}
       breadcrumbs={[
         { name: 'Padecimientos', url: absoluteUrl('/padecimientos') },
         { name: 'Tenosinovitis de De Quervain', url: absoluteUrl('/padecimientos/tenosinovitis-de-quervain') }
       ]}
-      structuredData={[medicalConditionJsonLd(conditionData)]}
+      structuredData={[medicalConditionJsonLd(conditionData), articleStructuredData]}
     >
+      <Head>
+        {/* Metadatos adicionales para SEO */}
+        <meta name="keywords" content="tenosinovitis de quervain, pulgar whatsapp, dolor pulgar, infiltraciones merida, tendinitis pulgar, dolor muñeca, tratamiento quervain, infiltraciones corticosteroides, dolor tendones pulgar" />
+        <meta name="author" content="Infiltra Clínica" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        
+        {/* Open Graph mejorado para Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Tenosinovitis de De Quervain: Tratamiento con Infiltraciones | Infiltra Clínica" />
+        <meta property="og:description" content="Tratamiento especializado para tenosinovitis de De Quervain (pulgar de WhatsApp) con infiltraciones de precisión en Mérida. Alivio efectivo del dolor con 90% de efectividad." />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:alt" content="Anatomía de la tenosinovitis de De Quervain mostrando inflamación de tendones del pulgar" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:site_name" content="Infiltra Clínica" />
+        <meta property="og:locale" content="es_MX" />
+        <meta property="article:author" content="Infiltra Clínica" />
+        <meta property="article:section" content="Salud" />
+        <meta property="article:tag" content="tenosinovitis, dolor pulgar, infiltraciones, tratamiento" />
+        
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tenosinovitis de De Quervain: Tratamiento Efectivo" />
+        <meta name="twitter:description" content="Tratamiento especializado para dolor de pulgar con infiltraciones de precisión. 90% de efectividad en Mérida." />
+        <meta name="twitter:image" content={imageUrl} />
+        <meta name="twitter:image:alt" content="Anatomía de la tenosinovitis de De Quervain" />
+        
+        {/* Metadatos médicos específicos */}
+        <meta name="medical-condition" content="Tenosinovitis de De Quervain" />
+        <meta name="treatment-type" content="Infiltraciones con corticosteroides" />
+        <meta name="specialty" content="Medicina del Dolor, Reumatología" />
+        <meta name="location" content="Mérida, Yucatán, México" />
+        
+        {/* Schema.org adicional para imagen */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ImageObject",
+              "url": imageUrl,
+              "name": "Anatomía de la tenosinovitis de De Quervain",
+              "description": "Ilustración médica mostrando la inflamación de los tendones del pulgar en la tenosinovitis de De Quervain",
+              "width": "800",
+              "height": "600",
+              "encodingFormat": "image/png"
+            })
+          }}
+        />
+      </Head>
       <main className="bg-white text-gray-800">
         <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50">
           <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
@@ -106,6 +207,19 @@ export default function TenosinovitisDeQuervainPage() {
           <div className="mx-auto max-w-6xl px-4">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
+                <div className="mb-8">
+                  <img 
+                    src="/tenosinovitis-quervain.png" 
+                    alt="Anatomía de la tenosinovitis de De Quervain mostrando inflamación de tendones del pulgar"
+                    className="w-full max-w-md mx-auto rounded-2xl shadow-lg border border-slate-200"
+                    width="400"
+                    height="300"
+                    loading="eager"
+                  />
+                  <p className="text-xs text-slate-500 text-center mt-2">
+                    Ilustración anatómica de la tenosinovitis de De Quervain
+                  </p>
+                </div>
                 <h2 className="text-2xl font-bold mb-6" style={{ color: '#344D63' }}>¿Qué es la Tenosinovitis de De Quervain?</h2>
                 <p className="text-gray-600 mb-4">
                   La tenosinovitis de De Quervain es una condición que afecta específicamente los tendones 
