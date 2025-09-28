@@ -27,8 +27,8 @@ export default function HomePage() {
       <Treatments />
       <GonartriosisVideo />
       <Process />
-      <Doctor />\n      <LocationHighlight />\n      <FacebookPost />
-      <Testimonials />\n      <LocationCTA />\n      <FAQ />
+      <Doctor />      <LocationHighlight />      <FacebookPost />
+      <Testimonials />      <LocationCTA />      <FAQ />
       <FinalCTA />
     </MainLayout>
   );

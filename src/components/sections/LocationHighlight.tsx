@@ -3,9 +3,9 @@ import Check from "../ui/Check";
 import { SITE_CONFIG } from "@/lib/seo";
 
 const accessPoints = [
-  "Ubicada en Col. Montecristo, zona norte de Merida",
+  "Ubicada en Col. Altabrisa, zona norte de Merida",
   "Estacionamiento propio y acceso para silla de ruedas",
-  "Referencia rapida: a 3 min de Plaza City Center",
+  "C. 19, Col. Altabrisa, 97130 Mérida, Yuc.",
 ];
 
 export default function LocationHighlight() {
@@ -18,7 +18,7 @@ export default function LocationHighlight() {
             Evaluaciones presenciales en Infiltra Clinica
           </h2>
           <p className="mt-4 text-sm md:text-base text-slate-600 max-w-xl">
-            Agenda una cita para valorarte en nuestra sede en Plenum Work Center. Contamos con sala de procedimientos, apoyo de imagen y seguimiento cercano posterior a cada infiltracion.
+            Agenda una cita para valorarte en nuestra sede en Unidad de Rehabilitación de Altabrisa. Seguimiento posterior a cada infiltración.
           </p>
           <ul className="mt-6 space-y-3 text-sm text-slate-700">
             {accessPoints.map((item) => (
