@@ -134,7 +134,7 @@ export default function NosotrosPage() {
                     <h2 className="text-2xl font-bold text-blue-900">Misión</h2>
                   </div>
                   <p className="text-slate-700 leading-relaxed text-lg">
-                    Brindar procedimientos de infiltración guiados con precisión excepcional, centrados en la 
+                    Brindar procedimientos de infiltración con precisión excepcional, centrados en la 
                     seguridad del paciente, la educación médica continua y la coordinación integral con el equipo 
                     tratante para lograr alivio articular sostenible y mejorar la calidad de vida.
                   </p>
@@ -191,7 +191,7 @@ export default function NosotrosPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold" style={{ color: '#344D63' }}>
-                        Dr. Roberto Carlos Pech Argüelles
+                        Responsable Sanitario: Dr. Roberto Carlos Pech Argüelles
                       </h3>
                       <p className="text-teal-600 font-medium">Medicina de Rehabilitación</p>
                     </div>
@@ -247,10 +247,10 @@ export default function NosotrosPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-2" style={{ color: '#344D63' }}>
-                        Procedimientos guiados
+                        Procedimientos Especializados
                       </h4>
                       <p className="text-slate-600 text-sm">
-                        Infiltraciones de precisión guiadas por ultrasonido o fluoroscopía según el caso
+                        Infiltraciones de precisión
                       </p>
                     </div>
                   </div>
